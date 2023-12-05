@@ -14,4 +14,13 @@ background-color: aquamarine;
 display: flex;
 flex-direction: column;
 align-items: center;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: space-between;
+}
+.card{
+    width: 90%;
+}
+.card img{
+    width: 200px;
 }
