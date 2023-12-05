@@ -1,7 +1,7 @@
 <h1 align="center">Resume-Builder</h1>
 
 <p align="center">
-<img src="./view/assets/front.png" width="180" height="180">
+<img src="https://w7.pngwing.com/pngs/605/888/png-transparent-resume-curriculum-vitae-template-moto-highway-racing-computer-icons-resume-blue-text-resume-thumbnail.png" width="180" height="180">
 </p>
 
 ## 📜 Description:
@@ -54,4 +54,3 @@ git clone https://github.com/rahul9695/Resume-Builder.git
   ☎️ PH:+91-8319514691.
 </p>
 
-## 🌐 References Used:
