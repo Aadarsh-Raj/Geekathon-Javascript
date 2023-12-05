@@ -1,7 +1,8 @@
-# <a href="https://aadarsh-raj.github.io/Geekathon-Javascript/Main/index.html">Team 3</a> 
+# Team 3 
+## <a href="https://aadarsh-raj.github.io/Geekathon-Javascript/Main/index.html">Check for Team Project</a> 
 
-## Team Members 
-Aadarsh Raj -> <a href="https://aadarsh-raj.github.io/Geekathon-Javascript/Main/index.html">Hosted Link</a> || <a href="">Demo Video</a> <br>
+### Team Members 
+Aadarsh Raj -> <a href="https://aadarsh-raj.github.io/payment-project/index.html">Hosted Link</a> || <a href="">Demo Video</a> <br>
 
 Rahul Meena -> <a href="https://rahul9695.github.io/Resume-Builder/view/index.html">Hosted Link</a> || <a href="">Demo Video</a> <br>
 
@@ -18,4 +19,4 @@ D S Srivtsa -> <a href="https://aadarsh-raj.github.io/Geekathon-Javascript/Main/
 
 Our team is dedicated to creating cutting-edge web applications that deliver exceptional user experiences. With a strong emphasis on collaboration and creativity, we strive to push the boundaries of what is possible with JavaScript. Our goal is to inspire and empower others to explore the endless possibilities of this powerful language.
 
-
+Thanks for watching our project 😇😇
