@@ -4,6 +4,10 @@ Test and improve your typing skills with this interactive Typing Speed Game! Com
 
 ![Game Demo]
 
+![Screenshot (284)](https://github.com/Aadarsh-Raj/Geekathon-Javascript/assets/134683293/51b92253-b32f-4c04-bf93-a19f1f620cb9)
+
+![Screenshot (285)](https://github.com/Aadarsh-Raj/Geekathon-Javascript/assets/134683293/ee04d525-34ac-4c96-9420-5920acc03ef2)
+
 
  
 ## Table of Contents

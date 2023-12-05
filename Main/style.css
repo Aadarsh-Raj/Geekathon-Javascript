@@ -1,26 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 *::-webkit-scrollbar{
 width: 0;
+}
+body{
+    background-color: #2f2e2a;
+    color: white;
 }
 .main{
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    
 }
 .header{
-    border: 2px solid;
     text-align: center;
+    padding: 0.8rem 0 1rem 0;
+    border-bottom: 2px solid ;
+}
+.header h1{
+    font-size: 3rem;
+    background: linear-gradient( 
+            to right, #9439ef,#9c5cdb,  
+             rgb(255, 0, 0), rgb(219, 56, 56)); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
 }
 .team-container{
-background-color: aquamarine;
 display: flex;
-flex-direction: column;
 align-items: center;
 flex-wrap: wrap;
-gap: 1rem;
-justify-content: space-between;
+gap: 6rem;
+padding: 1rem 2rem;
+justify-content: space-around;
+height: 85vh;
+padding-top: 2.5rem;
+overflow-y: scroll;
 }
-.card{
-    width: 90%;
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    /* flex-basis: 30%; */
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #2f2e2a;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .flip-card-front img{
+    width: 100% !important; 
+    height: 100% !important;
+  }
+  .card-title{
+    text-align: center;
+    padding: 0.4rem 0;
+    font-weight: bolder;
+    background-color: #43423d;
+  }
+  #arya{
+    background-color: #35334b;
+  }
+  #rahul{
+    background-color: #4194d0;
+  }
+  #srivatsa{
+    background-color: #c8c1ad;
+  }
+  #imamul{
+    background-color: #3a3a06 ;
+  }
+  #vineela{
+    background-color: #31314d;
+  }
+  #saurabh{
+    background-color: #4546f9;
+  }
+  .flip-card-back a{
+color: whitesmoke;
+margin: 0 1rem;
+  }
+  .flip-card-back a:hover{
+    color: #9439ef;
+  }
+  .flip-card-back a:active{
+    color: gray;
+  }
+  .type{
+    font-weight: 700;
+  }
+.link-container{
+  margin-top: 0.9rem;
 }
-.card img{
-    width: 200px;
+  .footer{
+    width: 100%;
+    background-color: black;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+@media screen and (max-width:700px) {
+    .flip-card{
+        width: 400px;
+        height: 450px;
+    }
 }
