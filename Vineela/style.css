@@ -110,13 +110,14 @@ body {
 
 
 h1 {
-    color: var(--heading-outline);
+    /* color: var(--heading-outline); */
     font-family: 'Nova Square', sans-serif;
     position: relative;
     color: transparent;
     -webkit-text-stroke: 0.1vw 	var(--heading-outline);
     text-transform: uppercase;
     letter-spacing: 0.1cm;
+    margin: 2rem;
 }
 
 h1 span {
@@ -151,7 +152,7 @@ h1 span::before {
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    box-shadow:5px 8px 20px  var(--heading-inside);
+    box-shadow:0 0 20px  var(--heading-inside);
 }
 
 .container input {
