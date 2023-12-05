@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://scalebranding.com/wp-content/uploads/2022/02/Thunder-Lion-Energy-Logo.jpg"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <div class="logo"></div>
+        <div class="nav">
+          <div class="laptop-view">
+            <a href="#">Home</a>
+            <a href="#donation-container">Donations</a>
+            <a href="#intro-section">About</a>
+          </div>
+        </div>
+        <div class="signup-btn">
+          <a href="#" id="signup-link">Sign Up/Login</a>
+        </div>
+      </header>
+
+      <section class="background-container" id="intro-section">
+        <div class="intro-box">
+          "Welcome to our donation page! Your generosity has the power to make a
+          significant impact. At ARYA FUNDS FOUNDATION, we are dedicated to
+          providing education and healthcare to underserved communities. Every
+          contribution you make plays a pivotal role in enabling us to expand
+          our outreach programs and offer vital resources."
+        </div>
+        <div class="animated-button">
+          <div class="heart-container"></div>
+          <button
+            class="animated-btn"
+            onmouseover="changeText()"
+            onmouseleave="resetText()"
+          >
+            DONATE NOW
+          </button>
+        </div>
+      </section>
+
+      <section class="donation-container" id="donation-container">
+        <h1>
+          "Contribute to the betterment of humanity through your donation..."
+        </h1>
+
+        <div class="card-container">
+          <div class="card-item">
+            <div class="card-upper">
+              <img
+                src="https://www.kristinepaulsenphotography.com/blog/wp-content/uploads/2018/05/LEEF-Ladysmith-Educational-Enrichment-Fund-for-the-School-District-of-Ladysmith.png"
+                alt=""
+              />
+            </div>
+            <div class="card-lower">
+              <h2>Universal Welfare Fund</h2>
+              <p>Support a versatile fund addressing diverse welfare needs.</p>
+              <button type="button" class="donate-btn">
+                <a href="#user-form-container">
+                  <img
+                    src="https://razorpay.com/unfiltered-content/uploads/2020/08/Screenshot-2020-08-10-at-2.12.45-PM.png"
+                    alt=""
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-item">
+            <div class="card-upper">
+              <img
+                src="https://www.kristinepaulsenphotography.com/blog/wp-content/uploads/2018/05/LEEF-Ladysmith-Educational-Enrichment-Fund-for-the-School-District-of-Ladysmith.png"
+                alt=""
+              />
+            </div>
+            <div class="card-lower">
+              <h2>Education Enrichment Fund</h2>
+              <p>Empower underprivileged students with quality education..</p>
+              <button type="button" class="donate-btn">
+                <a href="#user-form-container">
+                  <img
+                    src="https://razorpay.com/unfiltered-content/uploads/2020/08/Screenshot-2020-08-10-at-2.12.45-PM.png"
+                    alt=""
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div class="card-item">
+            <div class="card-upper">
+              <img
+                src="https://www.kristinepaulsenphotography.com/blog/wp-content/uploads/2018/05/LEEF-Ladysmith-Educational-Enrichment-Fund-for-the-School-District-of-Ladysmith.png"
+                alt=""
+              />
+            </div>
+            <div class="card-lower">
+              <h2>Nutrition Sustenance Initiative</h2>
+              <p>
+                Make a meaningful impact by participating in our Nutrition
+                Sustenance Initiative..
+              </p>
+              <button type="button" class="donate-btn">
+                <a href="#user-form-container">
+                  <img
+                    src="https://razorpay.com/unfiltered-content/uploads/2020/08/Screenshot-2020-08-10-at-2.12.45-PM.png"
+                    alt=""
+                  />
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <!-- payment form -->
+
+          <div class="user-form-container" id="user-form-container">
+            <div class="top">
+              <div class="top-left">Amount Details</div>
+              <div class="top-right">X</div>
+            </div>
+            <div class="mid">
+              <img
+                src="data:image/png;base64,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"
+                alt=""
+              />Pay Easy
+            </div>
+            <form action="" class="form">
+              <label for="">Amount (₹)</label>
+              <input type="number" name="" id="" placeholder="Enter a value" />
+              <button id="rzp-button1" class="submit-btn">Pay</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="about">
+        <div class="footer-left">
+          <img
+            src="https://scalebranding.com/wp-content/uploads/2022/02/Thunder-Lion-Energy-Logo.jpg"
+            alt="Email"
+          />
+          <p>Email us : aryaraj.dev.js@gmail.com</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-item">
+            <a href="#"><h3>Spark Foundation</h3></a>
+            <a href="#intro-section"><p>About</p></a>
+            <a href="#donation-container"><p>Donations</p></a>
+            <a href="#"><p>FAQs</p></a>
+            <a href="#"><p>Privacy Policy</p></a>
+          </div>
+          <div class="footer-right-item">
+            <a href="#"><h3>Spark Foundation</h3></a>
+            <a href="#intro-section"><p>About</p></a>
+            <a href="#"><p>Donations</p></a>
+            <a href="#"><p>FAQs</p></a>
+            <a href="#"><p>Privacy Policy</p></a>
+          </div>
+          <div class="footer-right-item">
+            <a href="#"><h3>Spark Foundation</h3></a>
+            <a href="#intro-section"><p>About</p></a>
+            <a href="#"><p>Donations</p></a>
+            <a href="#"><p>FAQs</p></a>
+            <a href="#"><p>Privacy Policy</p></a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      type="module"
+      src="https://checkout.razorpay.com/v1/checkout.js"
+    ></script>
+    <script src="payment.js"></script>
+  </body>
+</html>
