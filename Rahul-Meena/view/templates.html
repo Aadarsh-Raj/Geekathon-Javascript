@@ -12,124 +12,154 @@
     <script defer src="../controller/script.js"></script>
     <title>Resume Template</title>
 </head>
-<body class="h-screen w-screen overflow-hidden">
-    <!-- top navbar -->
-    <nav class="flex justify-between items-center p-2 bg-slate-200">
-        <div class="">
-            <img src="./assets/logo.png" alt="img not available" class="h-[50px]">
-        </div>
-        <button id="downloadBtn" href="" class="animate-pulse flex items-center gap-[10px] px-5 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded-lg">
-            <i class="fa-solid fa-download fa-md" style="color: #ffffff;"></i>
-            <span>Download PDF</span>
-        </button>
-    </nav>
-    <main class="flex pt-2 w-screen h-full">
-        <!-- main Left container  -->
-        <div id="template-left-container" class="max-w-[25%] mb-10 flex flex-col bg-slate-200 overflow-y-auto">
-            <form action="" class="flex flex-col p-2 gap-[10px]">
-                <div class="flex flex-col gap-[10px]">
-                    <label for="template-type" class="text-[1.3rem]">Template Type</label>
-                    <select name="template-type" id="" class="py-3 rounded text-lg text-gray-700 outline-none cursor-pointer">
-                        <option value="Two-column" class="">Two-column</option>
-                        <option value="">Minimalist</option>
-                    </select>
-                </div>
-                <!-- <hr class="bg-gray-400 h-[1px] w-[90%] mx-auto"> -->
-                <div>
-                    <h3 class="text-[1.3rem] my-2">Header Color</h3>
-                    <input id="header-color" type="color" value="#424759">
-                </div>
-                <div>
-                    <h3 class="text-[1.3rem] my-2">Header-Text Color</h3>
-                    <input id="header-text-color" type="color" value="#abcdef">
-                </div>
-                <div>
-                    <h3 class="text-[1.3rem] my-2">Personal Details</h3>
-                    <input id="fullname" class="w-full my-2 p-2 rounded" type="text" placeholder="Full Name">
-                    <input id="email-value" class="w-full my-2 p-2 rounded" type="email" placeholder="Email-ID">
-                    <input id="phoneNumber-value" class="w-full my-2 p-2 rounded" type="number" placeholder="Phone">
-                    <input id="city-value" class="w-full my-2 p-2 rounded" type="text" placeholder="City, Country">
-                </div>
-                <div>
-                    <h3 class="text-[1.3rem] my-2">Professional Details</h3>
-                    <input id="job-title-value" class="w-full my-2 p-2 rounded" type="text" placeholder="Wanted Job Title">
-                    <textarea class="w-full my-2 p-2 rounded" name="" id="summary-value" cols="30" rows="5" placeholder="Professional Summary"></textarea>
-                    <input id="skills-value" class="w-full my-2 p-2 rounded" type="text" placeholder="Skills (Use comma, to seperate each skills)">
-                </div>
-                <!-- Add Employement Tab  -->
-                <div id="add-employement" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Employement</div>
-                <div id="employement-template"></div>
-                <!-- Add Project Tab  -->
-                <div id="add-project" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Project</div>
-                <div id="project-template"></div>
-                <div>
-                    <h3 class="text-[1.3rem] my-2">Education Background</h3>
-                    <!-- Add Education Tab  -->
-                    <div id="add-education-inputs" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Education</div>
-                    <div id="education-inputs-container"></div>
-                </div>
-            </form>
-        </div>
-        <!-- Main Right container Two Column -->
-        <div id="template-right-container-twoColumn" class="w-full bg-slate-300 overflow-y-auto">
-            <div id="resume-header-bg-color" class="text-white h-[150px] bg-slate-700 px-3 flex items-center justify-between">
-                <div class="">
-                    <h1 id="final-fullName" class="text-[2rem]">Rahul Meena</h1>
-                    <p id="final-jobTitle" class="text-[1.2rem]">Software Engineer</p>
-                </div>
-                <div class="w-[120px] h-[120px] bg-slate-200 rounded-full overflow-hidden">
-                    <img src="./assets/candidate.jpeg" alt="">
-                </div>
+<body>
+    <div class="h-screen w-screen overflow-hidden">
+        <!-- top navbar -->
+        <nav class="flex justify-between items-center p-2 pr-3 bg-slate-200">
+            <div class="">
+                <img src="./assets/logo.png" alt="img not available" class="h-[50px]">
             </div>
-            <div class="flex h-max min-h-[970px]">
-                <!-- final resume left container  -->
-                <div class="w-[38%] bg-gray-300 px-3 ">
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">Skills</p>
-        
-                    <div id="my-skills" class="flex gap-1 flex-wrap">
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">HTML</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">CSS</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">JavaScript</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">React</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Node Js</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Mongo DB</div>
-                        <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Dev Ops</div>
+            <button id="downloadBtn" href="" class="animate-pulse hover:animate-none hover:scale-105 hover:shadow-lg flex items-center gap-[10px] px-5 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded-lg">
+                <i class="fa-solid fa-download fa-md" style="color: #ffffff;"></i>
+                <span>Download PDF</span>
+            </button>
+        </nav>
+        <main class="flex pt-2 h-screen">
+            <!-- main Left container  -->
+            <div id="template-left-container" class="max-w-[30%] mb-10 flex flex-col bg-slate-200 overflow-y-auto">
+                <form action="" class="flex flex-col p-3 gap-[10px]">
+                    <div class="flex flex-col gap-[10px]">
+                        <label for="template-type" class="text-[1.3rem]">Template Type</label>
+                        <select name="template-type" id="template-type" class="py-3 rounded text-lg text-gray-700 outline-none cursor-pointer">
+                            <option value="two-column" class="">Two-column</option>
+                            <option value="minimalist">Minimalist</option>
+                        </select>
                     </div>
-        
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">contact</p>
-                    <div id="contact" class="flex flex-col gap-2">
+                    <!-- <hr class="bg-gray-400 h-[1px] w-[90%] mx-auto"> -->
+                    <div>
+                        <h3 class="text-[1.3rem] my-2">Header Color</h3>
+                        <input id="header-color" type="color" value="#424759">
+                    </div>
+                    <div>
+                        <h3 class="text-[1.3rem] my-2">Header-Text Color</h3>
+                        <input id="header-text-color" type="color" value="#abcdef">
+                    </div>
+                    <div>
+                        <h3 class="text-[1.3rem] my-2">Personal Details</h3>
+                        <input id="fullname" class="w-full my-2 p-2 rounded" type="text" placeholder="Full Name">
+                        <input id="email-value" class="w-full my-2 p-2 rounded" type="email" placeholder="Email-ID">
+                        <input id="phoneNumber-value" class="w-full my-2 p-2 rounded" type="number" placeholder="Phone">
+                        <input id="city-value" class="w-full my-2 p-2 rounded" type="text" placeholder="City, Country">
+                    </div>
+                    <div>
+                        <h3 class="text-[1.3rem] my-2">Professional Details</h3>
+                        <input id="job-title-value" class="w-full my-2 p-2 rounded" type="text" placeholder="Wanted Job Title">
+                        <textarea class="w-full my-2 p-2 rounded" name="" id="summary-value" cols="30" rows="5" placeholder="Professional Summary"></textarea>
+                        <input id="skills-value" class="w-full my-2 p-2 rounded" type="text" placeholder="Skills (Use comma, to seperate each skills)">
+                    </div>
+                    <!-- Add Employement Tab  -->
+                    <div id="add-employement" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Employement</div>
+                    <div id="employement-template"></div>
+                    <!-- Add Project Tab  -->
+                    <div id="add-project" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Project</div>
+                    <div id="project-template"></div>
+                    <div>
+                        <h3 class="text-[1.3rem] my-2">Education Background</h3>
+                        <!-- Add Education Tab  -->
+                        <div id="add-education-inputs" class="w-full my-2 py-2 bg-blue-400 hover:bg-blue-500 text-white text-lg rounded text-center cursor-pointer">Add Education</div>
+                        <div id="education-inputs-container"></div>
+                    </div>
+                </form>
+            </div>
+            <!-- Main Right container Two Column -->
+            <div id="template-right-container-twoColumn" class="w-full bg-slate-200 overflow-y-auto">
+                <div id="resume-header" class="text-white h-[160px] bg-slate-700 px-3 flex items-center justify-between">
+                    <div class="">
+                        <h1 id="final-fullName" class="text-[2rem]">Rahul Meena</h1>
+                        <p id="final-jobTitle" class="text-[1.2rem]">Software Engineer</p>
+                    </div>
+                    <!-- nav contact information -->
+                    <div id="nav-contact-ele" class="flex flex-col gap-2 hidden">
                         <div class="flex items-center h-8">
                             <i class="fa-solid fa-phone fa-lg" style="color: #243a60;"></i>
-                            <div id="final-phone" class="ml-2 mb-1">918899889988</div>
+                            <div id="final-phone" class="phone-number ml-2 mb-1">918899889988</div>
                         </div>
                         <div class="flex items-center h-8">
                             <i class="fa-solid fa-envelope fa-lg" style="color: #243a60;"></i>
-                            <div id="final-email" class="ml-2 mb-1">example@gmail.com</div>
+                            <div id="final-email" class="user-email ml-2 mb-1">example@gmail.com</div>
                         </div>
                         <div class="flex items-center h-8">
                             <i class="fa-solid fa-location-dot fa-lg" style="color: #243a60;"></i>
-                            <div id="final-address" class="ml-2 mb-1">Delhi, India</div>
+                            <div id="final-address" class="user-address ml-2 mb-1">Delhi, India</div>
                         </div>
                     </div>
+                    <div id="resume-profile-img" class="w-[130px] h-[130px] bg-slate-200 rounded-full overflow-hidden block">
+                        <img src="./assets/candidate.jpeg" alt="">
+                    </div>
                 </div>
-                <!-- Final Resume right container  -->
-                <div class="w-full bg-white px-3">
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">summary</p>
-                    <div id="final-summary">
-                        Experienced Software Development Engineer (SDE) adept at designing, coding, and maintaining innovative software solutions. 
-                        Proficient in multiple programming languages, with a strong track record of problem-solving and collaboration. 
-                        Demonstrates a keen commitment to delivering high-quality results in dynamic team environments.</div>
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">PROFESSIONAL EXPERIENCE</p>
-                    <div id="experience"></div>
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">PROJECTS</p>
-                    <div id="projects"></div>
-                    <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">EDUCATION</p>
-                    <div id="education-data"></div>
+                <div class="flex h-max min-h-[970px]">
+                    <!-- final resume left container  -->
+                    <div id="resume-left" class="w-[38%] bg-gray-300 px-3">
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">Skills</p>
+            
+                        <div class="skills-tab flex gap-1 flex-wrap">
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">HTML</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">CSS</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">JavaScript</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">React</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Node Js</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Mongo DB</div>
+                            <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Dev Ops</div>
+                        </div>
+            
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">contact</p>
+                        <div id="contact" class="contact-tab flex flex-col gap-2">
+                            <div class="flex items-center h-8">
+                                <i class="fa-solid fa-phone fa-lg" style="color: #243a60;"></i>
+                                <div class="phone-number ml-2 mb-1">918899889988</div>
+                            </div>
+                            <div class="flex items-center h-8">
+                                <i class="fa-solid fa-envelope fa-lg" style="color: #243a60;"></i>
+                                <div class="user-email ml-2 mb-1">example@gmail.com</div>
+                            </div>
+                            <div class="flex items-center h-8">
+                                <i class="fa-solid fa-location-dot fa-lg" style="color: #243a60;"></i>
+                                <div class="user-address ml-2 mb-1">Delhi, India</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Final Resume right container  -->
+                    <div class="w-full bg-white px-3">
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">summary</p>
+                        <div id="final-summary">
+                            Experienced Software Development Engineer (SDE) adept at designing, coding, and maintaining innovative software solutions. 
+                            Proficient in multiple programming languages, with a strong track record of problem-solving and collaboration. 
+                            Demonstrates a keen commitment to delivering high-quality results in dynamic team environments.
+                        </div>
+                        <!-- skills Minimlaist  -->
+                        <div id="resume-rightSide-skills" class="hidden">
+                            <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">Skills</p>
+                            <div class="skills-tab flex gap-1 flex-wrap">
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">HTML</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">CSS</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">JavaScript</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">React</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Node Js</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Mongo DB</div>
+                                <div class="bg-gray-800 text-[0.8rem] text-white w-max px-2 py-1 rounded">Dev Ops</div>
+                            </div>
+                        </div>
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">PROFESSIONAL EXPERIENCE</p>
+                        <div id="experience"></div>
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">PROJECTS</p>
+                        <div id="projects"></div>
+                        <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">EDUCATION</p>
+                        <div id="education-data"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- minmialist template  -->
-
-    </main>
+            <!-- minmialist template  -->
+        </main>
+    </div>
 </body>
 </html>
