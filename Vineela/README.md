@@ -33,7 +33,7 @@ The Typing Speed Game is a web-based application that allows users to practice a
 
 ## Usage
 
-1. Open the [live demo](#[(https://velpurivineela.github.io/Typing-Speed-Test-Game-/)]) in a web browser.
+1. Open the [Live Demo](https://velpurivineela.github.io/Typing-Speed-Test-Game-/) in a web browser.
 2. Click on the "Start" button to generate a new paragraph.
 3. Type the displayed paragraph in the input field.
 4. Receive real-time feedback on WPM, mistakes, and CPM.
