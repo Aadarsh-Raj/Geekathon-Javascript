@@ -24,9 +24,9 @@
                 <span>Download PDF</span>
             </button>
         </nav>
-        <main class="flex pt-2 h-screen">
+        <main class="flex pt-2 h-full">
             <!-- main Left container  -->
-            <div id="template-left-container" class="max-w-[30%] mb-10 flex flex-col bg-slate-200 overflow-y-auto">
+            <div id="template-left-container" class="max-w-[25%] pb-10 bg-slate-200 overflow-scroll">
                 <form action="" class="flex flex-col p-3 gap-[10px]">
                     <div class="flex flex-col gap-[10px]">
                         <label for="template-type" class="text-[1.3rem]">Template Type</label>
@@ -72,7 +72,7 @@
                 </form>
             </div>
             <!-- Main Right container Two Column -->
-            <div id="template-right-container-twoColumn" class="w-full bg-slate-200 overflow-y-auto">
+            <div id="template-right-container-twoColumn" class="w-full bg-slate-200 overflow-y-scroll">
                 <div id="resume-header" class="text-white h-[160px] bg-slate-700 px-3 flex items-center justify-between">
                     <div class="">
                         <h1 id="final-fullName" class="text-[2rem]">Rahul Meena</h1>
@@ -93,13 +93,22 @@
                             <div id="final-address" class="user-address ml-2 mb-1">Delhi, India</div>
                         </div>
                     </div>
-                    <div id="resume-profile-img" class="w-[130px] h-[130px] bg-slate-200 rounded-full overflow-hidden block">
-                        <img src="./assets/candidate.jpeg" alt="">
+                    <div id="resume-profile-img" class="relative w-[130px] h-[130px] bg-slate-200 rounded-full overflow-hidden block group">
+                        <label for="profile-picture-input" class="cursor-pointer absolute inset-0">
+                            <img id="profile-picture" src="./assets/candidate.jpeg" alt="Profile Picture" class="w-full h-full">
+                            <div class="absolute inset-0 bg-slate-700 opacity-0 transition-opacity group-hover:opacity-50 flex items-center justify-center">
+                                <span class="text-white text-center text-lg">Change photo</span>
+                            </div>
+                        </label>
+                        <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
                     </div>
+                    <!-- <div id="resume-profile-img" class="w-[130px] h-[130px] bg-slate-200 rounded-full overflow-hidden block">
+                        <img src="./assets/candidate.jpeg" alt="">
+                    </div> -->
                 </div>
                 <div class="flex h-max min-h-[970px]">
                     <!-- final resume left container  -->
-                    <div id="resume-left" class="w-[38%] bg-gray-300 px-3">
+                    <div id="resume-left" class="w-[38%] bg-gray-300 px-3 pb-10">
                         <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">Skills</p>
             
                         <div class="skills-tab flex gap-1 flex-wrap">
@@ -129,7 +138,7 @@
                         </div>
                     </div>
                     <!-- Final Resume right container  -->
-                    <div class="w-full bg-white px-3">
+                    <div class="w-full bg-white px-3 pb-20">
                         <p class="border-b border-gray-500 text-[1.1rem] font-semibold uppercase my-3">summary</p>
                         <div id="final-summary">
                             Experienced Software Development Engineer (SDE) adept at designing, coding, and maintaining innovative software solutions. 

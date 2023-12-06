@@ -506,27 +506,6 @@ function updateEduDescription(e, id){
     educationDescription.innerText = e.target.value;
 }
 
-// function printContent() {
-//     // Open a new window for printing
-//     var printWindow = window.open('', '_blank');
-
-//     // Inject the content to be printed into the new window
-//     printWindow.document.write('<html><head><title>Print</title>');
-//     printWindow.document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />'); // Include font-awesome styles
-//     printWindow.document.write('<link rel="stylesheet" type="text/css" href="styles.css">'); // Include your external stylesheet
-//     printWindow.document.write('<script src="https://cdn.tailwindcss.com"></script>'); // Include tailwind Library
-//     printWindow.document.write('<script defer src="../controller/script.js"></script>');
-//     printWindow.document.write('</head><body>');
-//     printWindow.document.write(document.getElementById('template-right-container-twoColumn').innerHTML);
-//     printWindow.document.write('</body></html>');
-
-//     // Close the document after writing the content
-//     printWindow.document.close();
-
-//     // Trigger the print function
-//     printWindow.print();
-// }
-
 // DOWNLOAD PDF BUTTON LOGIC WITH "HTML2PDF" LIBRARY
 window.onload = function(){
     document.getElementById('downloadBtn')
@@ -561,4 +540,24 @@ window.onload = function(){
 //         windowWidth : 675
 //     })
 // }
+
+    // Assuming you have an element with id="profile-picture"
+    const profilePicture = document.getElementById('profile-picture');
+    const profilePictureInput = document.getElementById('profile-picture-input');
+
+    // Event listener to trigger when a new file is selected
+    profilePictureInput.addEventListener('change', function () {
+        const file = this.files[0]; // Get the selected file
+
+        if (file) {
+            // Read the file as a data URL
+            const reader = new FileReader();
+            // console.log(reader);
+            reader.onload = function (e) {
+                // Update the src attribute of the profile picture
+                profilePicture.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
 });
