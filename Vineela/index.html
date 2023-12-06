@@ -8,19 +8,25 @@
         <link rel="stylesheet" href="./style.css"/> 
     </head>
     <body>
+        <!-- Theme switcher section with sun and moon icons -->
         <div id="theme-switcher">
+            <!-- Sun icon for light theme -->
             <svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" id = "icon-sun">
                 <path d="M84.9473 134.963C112.57 134.963 134.963 112.57 134.963 84.9473C134.963 57.3243 112.57 34.9315 84.9473 34.9315C57.3244 34.9315 34.9316 57.3243 34.9316 84.9473C34.9316 112.57 57.3244 134.963 84.9473 134.963Z" stroke="#997f44" stroke-width="11.5421" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M139.888 139.888L138.887 138.887M138.887 31.0072L139.888 30.0069L138.887 31.0072ZM30.0069 139.888L31.0072 138.887L30.0069 139.888ZM84.9473 8.61558V8V8.61558ZM84.9473 161.895V161.279V161.895ZM8.61558 84.9473H8H8.61558ZM161.895 84.9473H161.279H161.895ZM31.0072 31.0072L30.0069 30.0069L31.0072 31.0072Z" stroke="#997f44" stroke-width="15.3895" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
 
+            <!-- Moon icon for dark theme -->
             <svg width="161" height="166" viewBox="0 0 161 166" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-moon">
                 <path d="M6.20899 86.2164C8.97909 125.844 42.6051 158.085 82.8485 159.855C111.242 161.086 136.635 147.851 151.87 126.998C158.18 118.457 154.794 112.763 144.252 114.687C139.097 115.61 133.788 115.995 128.247 115.764C90.6202 114.225 59.8412 82.7537 59.6874 45.5882C59.6104 35.585 61.688 26.1205 65.4584 17.5024C69.6136 7.96096 64.612 3.42107 54.9936 7.49927C24.5224 20.3495 3.66973 51.0514 6.20899 86.2164Z" stroke="#b1b0b5" stroke-width="11.5421" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 
                 
         </div>
+
+        <!-- Main content section -->
         <div class="main">
+            <!-- Heading with dynamic text spans -->
             <h1>
                 <span data-text="Lets">Lets</span>
                 <span data-text="Test">Test</span> 
@@ -28,13 +34,18 @@
                 <span data-text="Typing...">Typing...</span>
             </h1>
             
+            <!-- Container for the typing game -->
             <div class="container">
+                <!-- Input field for typing -->
                 <input type="text" class="textinput"/>
                 <div class="background-text">
                    <p id="pg">
                     
                    </p>
+
+                   <!-- Inner container for result display -->
                    <div class="containerin">
+                        <!-- Result elements: Time, WPM, Mistake, CPM -->
                         <div class="result">
                             <div class="time">
                                 <p class="txt1">Time</p>
@@ -54,12 +65,14 @@
                                 <p class="txt2">0</p>
                             </div>
                         </div>
+                        <!-- Reset button to start a new typing session -->
                         <button>Reset</button>
                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Including the JavaScript file for dynamic functionality -->
         <script src="script.js"></script>
 
     </body>
