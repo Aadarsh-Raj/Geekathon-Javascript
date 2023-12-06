@@ -1,0 +1,331 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#board-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 70%;
+    margin: 15px;   
+}
+h2{
+    color: white;
+    font-size: 35px;
+    margin: 15px;
+}
+
+.board{
+    /* order: -1; */
+    background: transparent;
+    background-color: rgb(223 227 230 / 55%);
+    width:20%;
+    height: fit-content;
+    min-width: 260px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.top{
+    width: 80%;
+    margin:  10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#middle-div{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    margin: 15px auto;
+    height: fit-content;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
+    box-shadow:rgb(0 0 0 / 9%) 0px 9px 12px, rgb(0 0 0 / 6%) 0px 6px 6px;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    background-color:rgba(88, 88, 88, 0.5);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+    font-family: sans-serif;
+    
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+.card-div{
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 160px;
+    margin: 10px auto;
+    background-color: #fff;
+    box-shadow:rgb(0 0 0 / 9%) 0px 9px 12px, rgb(0 0 0 / 6%) 0px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+label{  
+    font-size: 14px;
+    font-weight: 400;
+    background-color: blueviolet;
+    width: fit-content;
+    text-align: center;
+    border-radius: 12px;
+    padding: 4px;
+    
+}
+.date-task{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+}
+.date-task p{
+    background-color: rgba(221, 221, 221, 0.5);
+    border-radius: 5px;
+    padding: 4px;
+}
+.date-task p img{
+    width:15px;
+    vertical-align: top;
+}
+
+.card-div img , .top img { 
+    width: 10%;
+    vertical-align: middle;
+}
+.hambur{
+    width: 10%;
+    vertical-align: middle;
+}
+
+.button1{
+    display: flow-root;
+    justify-self: flex-end;
+    align-self: flex-end;
+    width: 90%;
+    margin: 0 auto; 
+    border: none;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.add-card{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom:10px;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.button2{
+    width: 280px;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.top a img{
+    margin-left: 90%;
+    width: 20px;
+}
+
+.top p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.pop-up{
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
+    /* display: flex; */
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.pop-up div{
+    /* margin-top: 10px; */
+    padding: 10px;
+}
+
+.pop-up div span{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pop-up button{
+    display: block;
+    background-color: #fff;
+    border: none;
+    box-shadow:rgb(0 0 0 / 9%) 0px 9px 12px, rgb(0 0 0 / 6%) 0px 6px 6px;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+
+}
+.aside{
+    margin-left:400px;
+}
+.active{
+    filter: blur(20px);
+}
+
+.cardinfo-box-progress-bar{
+    width: 100%;
+    border-radius: 30px;
+    height: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.cardinfo-box-progress{
+    height: 100%;
+    border-radius: 30px;
+    /* background-color: #87ceeb; */
+    width: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+}
+#close-it{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    font-size: 40px;
+    
+}
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active{
+    opacity: 1;
+}
+
+#board-input, .card-input{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 10px;
+    background-color:#fff;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+#board-input input{
+    height: 40px;
+    width:250px;
+    border-radius: 5px;
+    border: 2px solid #0079bf;
+    margin: 10px auto;
+    outline: none;
+}
+.card-input input{
+    width: 210px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #0079bf;
+    margin: 10px auto;
+    outline: none;
+}
+
+#board-input ::placeholder , .card-input ::placeholder{
+    font-size: 17px;
+    padding: 5px;
+}
+#board-input button , .card-input button{
+    width: fit-content;
+    height: 35px;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #0079bf;
+    color: white;
+    cursor: pointer;
+}
+#board-input a{
+    position: absolute;
+    top: 65px;
+    left: 100px;
+    font-size: 40px;
+}
+.card-input a{
+    position: absolute;
+    top: 65px;
+    left: 60px;
+    font-size: 40px;
+}
+#board-input button:focus , .card-input button:focus{ 
+    border-color: #0079bf;
+}
+
+.card-div.dragging{
+    opacity: .5;
+}
+#value{
+        width: fit-content;
+        height: fit-content;
+        margin-top: -20px;
+}
+.card-input{
+    width: 230px;
+
+}
+.top-span{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+}
