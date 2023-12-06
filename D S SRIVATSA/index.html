@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minesweeper</title>
+        <link rel="icon" href="marine.png">
+        <link rel="stylesheet" href="style.css">
+        <!-- <script src="script.js" defer ></script> -->
+    </head>
+
+    <body>
+        <h1> 
+            <span>
+                <img src="marine.png" alt="" height="25" width="25">
+            </span> 
+            Minesweeper! 
+        </h1>
+        <!-- <script>
+            function reloadPage() {
+              location.reload();
+            }
+          </script> -->
+        <div id="board">
+            <div class="gameOver">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 612" enable-background="new 0 0 792 612"><g fill=" #A2F0EE"><path class="inside" d="M174 238v4h56v-4h8v-8h4v-8h4v-8h4v-8h4v-28h-48v20h24v8h-4v8h-4v8h-40v-8h-4v-8h-4v-8h-4v-32h4v-8h4v-8h4v-8h40v8h4v8h4v8h24v-8h-4v-8h-4v-8h-4v-8h-4v-4h-8v-4h-56v4h-8v4h-4v8h-4v8h-4v8h-4v8h-4v32h4v8h4v8h4v8h4v8h4v8zM290 210h56v8h4v8h4v8h4v8h24v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-8h-4v-4h-16v4h-4v8h-4v8h-4v8h-4v8.1h-4v8h-4v8h-4v8h-4v8h-3.6v4h-.4v4h-4v8h-4v8h-4v8h-4v8h-4v8h24v-8h4v-8h4v-8h4V210zm8-20v-4h4v-8h4v-8h4v-8h4v-8h8v8h4v8h4v8.1h4v8h4v8h-40V190zM522 242V126h-36v12h-4v12h-4v12h-4v12h-4v8h-4v16h-4v4h-4v-4h-4v-16h-4v-8h-4v-12h-4v-12h-4v-12h-4v-12h-36v116h24v-80h4v12h4v8h4v16h4v12h4v12h4v12h4v4h20v-4h4v-12h4v-12h4v-12h4v-16h4v-8h3.9v-12h4.1v80zM562 222v-32h56v-20h-56v-24h63.9v-20H538v116h88v-20zM430 382h56v-20h-56v-24h64v-20h-88v116h88v-20h-64zM366 322v4h-4v12h-4v12h-4v12h-4v12h-4v12h-4v12h-4v-12h-4v-12h-4v-12h-4v-12h-4v-12h-4v-12h-4v-8h-24v8h4v12h4v12h4v12h4v12h4v12h4v12h4v12h4v12h4v12h28v-12h4v-12h4v-12h4v-12h4v-12h4v-12h4v-12h4v-12h4v-12h4v-8h-24zM274 354v-8h-4v-4h-4v-4h-4v-4h-4v-4h-4v-4h-8v-4h-12v-4h-24v4h-12v4h-8v4h-4v4h-4v4h-4v4h-4v4h-4v11.9h-3.9v36h3.9v11.9h4v4h4v4h4v4h4v4h4v4h8v4h12v4h24v-4 .2h12v-4h8v-4h4v-4h4v-4h4v-4h4v-4h4v-12.1h4v-36h-4V354zm-20 36v4h-4v4h-4v3.9h-4v4.1h-4v4h-4v4h-24v-4h-4v-4h-4v-4h-4v-4h-4v-4h-4v-36h4v-4h4v-4h4v-4h4v-4h4v-4h24v4h4v4h4v4.1h4v3.9h4v4h4v32zM606 398h-4v-12h-4v-4h-4v-8h4v-4h4v-4h4v-32h-4v-4h-4v-4h-4v-4h-4v-4h-80v116h24v-44h48v36h4v8h24v-8h-4v-28zm-24-33v1h-4v4h-44v-36h40v4h4v4h4v23z"/></g><path class="stroke" d="M142 166h4v32h-4zM146 158h4v8h-4zM150 150h4v8h-4zM154 142h4v8h-4zM158 134h4v8h-4zM162 130h4v4h-4zM166 126h8v4h-8zM174 122h56v4h-56zM230 126h8v4h-8zM254 158h4v8h-4zM250 150h4v8h-4zM246 142h4v8h-4zM242 134h4v8h-4zM238 130h4v4h-4zM230 166h24v4h-24zM226 158h4v8h-4zM222 150h4v8h-4zM218 142h-36v8h4v-4h32v4h4v-8zM178 150h4v8h-4zM174 158h4v8h-4zM170 166h4v32h-4zM174 198h4v8h-4zM178 206h4v8h-4zM186 222h36v-8h4v-8h-4v4h-4v8h-32v-4h-4v8zM230 198h-24v4h20v4h4zM254 178.1V206h4v-28h-4v-3.4h-48v3.4h-4v20h4v-19.9zM250 206h4v8h-4zM246 214h4v8h-4zM242 222h4v8h-4zM238 230h4v8h-4zM230 238h8v4h-8zM174 242h56v4h-56zM166 238h8v4h-8zM162 230h4v8h-4zM158 222h4v8h-4zM154 214h4v8h-4zM150 206h4v8h-4zM146 198h4v8h-4zM254 242h24v4h-24zM278 234h4v8h-4zM294 214h48v4h4v-8h-56v8h4zM310 122h16v4h-16zM306 126h4v4h-4zM326 126h4v4h-4zM302 130h4v8h-4zM330 130h4v8h-4zM298 138h4v8h-4zM294 146h4v8h-4zM290 154h4v8h-4zM286 162h4v8h-4zM282 170h4v8h-4zM278 178h4v8h-4zM274.3 194h3.7v-8h-4v8h-4v8h4.3zM266 210h4v-8h-4v8h-4v8h4zM258 218h4v8h-4zM254 226h4v8h-4zM250 234h4v8h-4zM282 226h4v8h-4zM286 218h4v8h-4zM346 218h4v8h-4zM350 226h4v8h-4zM354 234h4v8h-4zM358 242h24v4h-24zM382 234h4v8h-4zM378 226h4v8h-4zM374 218h4v8h-4zM370 210h4v8h-4zM366 202h4v8h-4zM362 194h4v8h-4zM358 186h4v8h-4zM354 178h4v8h-4zM350 170h4v8h-4zM346 162h4v8h-4zM342 154h4v8h-4zM338 146h4v8h-4zM334 138h4v8h-4zM322 158v-4h-8v8h8zM310 162h4v8h-4zM306 170h4v8h-4zM302 178h4v8h-4zM330 178h4v8h-4zM326 170h4v8h-4zM322 162h4v8h-4zM302 190v-4h-4v8h40v-8h-4v4zM398 242h24v4h-24zM394 126h4v116h-4zM398 122h36v4h-36zM426 182h4v-8h-4v-12h-4v80h4zM522 246v-4h4V126h-4v-4h-36v4h36v116h-24v4zM494 162v12h-4v8h4v60h4v-80zM434 126h4v12h-4zM438 138h4v12h-4zM442 150h4v12h-4zM446 162h4v12h-4zM450 174h4v8h-4zM430 182h4v16h-4zM434 198h4v12h-4zM438 210h4v12h-4zM442 222h4v12h-4zM446 234h4v4h-4zM450 238h20v4h-20zM470 234h4v4h-4zM474 222h4v12h-4zM478 210h4v12h-4zM482 198h4v12h-4zM486 182h4v16h-4zM454 182h4v16h-4zM458 198h4v4h-4zM462 182h4v16h-4zM466 174h4v8h-4zM470 162h4v12h-4zM474 150h4v12h-4zM478 138h4v12h-4zM482 126h4v12h-4zM534 126h4v116h-4zM538 242h88v4h-88zM626 222h4v20h-4zM562 194v28h64v-4h-60v-24h52v-4h-56zM618 170h4v20h-4zM626 150v-4h-64v24h56v-4h-52v-16zM626 126h4v20h-4zM538 122h88v4h-88zM210 314h24v4h-24zM198 318h12v4h-12zM190 322h8v4h-8zM186 326h4v4h-4zM182 330h4v4h-4zM178 334h4v4h-4zM174 338h4v4h-4zM170 342h4v4h-4zM166 346h4v12h-4zM162 358h4v36h-4zM166 394h4v12h-4zM170 406h4v4h-4zM174 410h4v4h-4zM178 414h4v4h-4zM182 418h4v4h-4zM186 422h4v4h-4zM190 426h8v4h-8zM198 430h12v4h-12zM210 434h24v4h-24zM234 430h12v4h-12zM246 426h8v4h-8zM254 422h4v4h-4zM258 418h4v4h-4zM262 414h4v4h-4zM266 410h4v4h-4zM270 406h4v4h-4zM274 394h4v12h-4zM278 358h4v36h-4zM274 346h4v12h-4zM270 342h4v4h-4zM266 338h4v4h-4zM262 334h4v4h-4zM258 330h4v4h-4zM254 326h4v4h-4zM246 322h8v4h-8zM234 318h12v4h-12zM210 338h24v4h-24zM234 342h4v4h-4zM238 346h4v4h-4zM242 350h4v4h-4zM246 354h4v4h-4zM250 358h4v36h-4zM246 394h4v4h-4zM242 398h4v4h-4zM238 402h4v4h-4zM234 406h4v4h-4zM206 342h4v4h-4zM202 346h4v4h-4zM198 350h4v4h-4zM194 354h4v4h-4zM190 358h4v36h-4zM194 394h4v4h-4zM198 398h4v4h-4zM202 402h4v4h-4zM206 406h4v4h-4zM210 410h24v4h-24zM290 314h24v4h-24zM314 318h4v8h-4zM318 326h4v12h-4zM286 318h4v8h-4zM290 326h4v12h-4zM294 338h4v12h-4zM298 350h4v12h-4zM302 362h4v12h-4zM306 374h4v12h-4zM310 386h4v12h-4zM314 398h4v12h-4zM318 410h4v12h-4zM322 422h4v12h-4zM326 434h28v4h-28zM354 422h4v12h-4zM358 410h4v12h-4zM362 398h4v12h-4zM366 386h4v12h-4zM370 374h4v12h-4zM374 362h4v12h-4zM378 350h4v12h-4zM382 338h4v12h-4zM386 326h4v12h-4zM390 318h4v8h-4zM366 314h24v4h-24zM362 318h4v8h-4zM358 326h4v12h-4zM354 338h4v12h-4zM350 350h4v12h-4zM346 362h4v12h-4zM342 374h4v12h-4zM338 386h4v12h-4zM334 374h4v12h-4zM330 362h4v12h-4zM326 350h4v12h-4zM322 338h4v12h-4zM402 318h4v116h-4zM406 314h88v4h-88zM494 318h4v20h-4zM430 342v20h56v-4h-52v-16h60v-4h-64zM486 362h4v20h-4zM430 386v28h64v20h4v-20h-4v-4h-60v-24h52v-4h-56zM406 434h88v4h-88zM506 318h4v116h-4zM510 434h24v4h-24zM578 390h-44v44h4v-40h40v32h4v-36zM582 426h4v8h-4zM586 434h24v4h-24zM610 426h4v8h-4zM606 398h4v28h-4zM602 386h4v12h-4zM598 382h4v4h-4zM594 374h4v8h-4zM598 370h4v4h-4zM602 366h4v4h-4zM606 334h4v32h-4zM602 330h4v4h-4zM598 326h4v4h-4zM594 322h4v4h-4zM590 318h4v4h-4zM510 314h80v4h-80zM538 338h36v-4h-40v36h44v-4h-40zM578 342h4v24h-4zM574 338h4v4h-4z"/></svg>
+            </div>
+        </div>
+        <br>
+        <div class="button-section">
+            <!-- <button id="flag-button">🚩</button> -->
+            <div style="display: flex; flex-direction: column; align-items: baseline;">
+                <div class="flagcountdisplay">
+                    Flags left: <span id='flags-count'></span>
+                </div>
+                <div class="minecountdisplay">
+                    Total Mines: <span id="mines-count"></span>
+                </div>
+            </div>
+            <button class="reload" type="submit"
+            style="padding: 1rem; border: none; border-radius: 5px; background-color: teal; margin: 1rem 0; cursor: pointer; color: aliceblue; font-weight: 700;" 
+            onclick="reloadPage()"> 
+            ↻ RELOAD GAME
+            </button>
+        </div>
+        
+        <script src="script.js" defer ></script>
+    </body>
+</html>
