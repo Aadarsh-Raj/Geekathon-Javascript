@@ -41,16 +41,16 @@ git clone https://github.com/rahul9695/Resume-Builder.git
 - Fork the Repo and create a Branch for any Issue that you are working upon.
 - Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
 - Add Screenshots to help me know what this Code is all about.
-
+  
 ## 👦 Developed By:
 <h2 align="center">Rahul Meena</h2>
 <p align="center">
-  <a href="https://github.com/rahul9695"><img src="" width=150px height=150px /></a> 
-    
+<!--   <a href="https://github.com/rahul9695"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" width=150px height=150px /></a>  -->
+  <a href="https://github.com/rahul9695"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/120627949/288416793-7c2486ac-ada2-45f2-853b-2b478896d1d6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231206T131534Z&X-Amz-Expires=300&X-Amz-Signature=85f0dcab6bcbedf4d031bac4208a4780df6f305644a0e38b5ff23009ea1f0b7d&X-Amz-SignedHeaders=host&actor_id=120627949&key_id=0&repo_id=726793408" width=150px height=250px /></a> 
+</p>
 <p align="center">
   <a target="_blank"href="https://www.linkedin.com/in/rahul-meena9695/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="mailto:rahul.meena9695@gmail.com?subject=Hello%20Rahul,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.instagram.com/rahul.meena.dobwaal/"><img src="https://img.shields.io/badge/instagram-%23D14836.svg?&style=for-the-badge&logo=instagram&logoColor=pink" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   ☎️ PH:+91-8319514691.
 </p>
-
