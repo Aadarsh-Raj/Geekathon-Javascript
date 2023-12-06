@@ -1,8 +1,10 @@
 # Minesweeper Game using JavaScript
-
+[Play MineSweeper-Online](https://srivatsa007.github.io/Geekster-JS/MineSweeper-Geekathon2/)
 This project is a simple implementation of the classic Minesweeper game using JavaScript.
+
 ____
-img/![Alt text](image.png)
+![image](https://github.com/srivatsa007/Geekster-JS/assets/70172502/03afdbde-0282-4622-ad8a-ae9f7a3fc7eb)
+
 ___
 ## Table of Contents
 - [How to play](#How_to_play)
