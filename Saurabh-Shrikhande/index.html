@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="shortcut icon" href="./invoice.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js" > </script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body class="bg"> 
+        <form action="" class="flex fgap2 responsive1" id="formfill">
+         <section class="pad25 bgwhite flex1">
+          <div>
+            <div  class="flex jsb ml">
+            <h3>Current Date: <span id="curDate" class="fontw">12/2/2023</span></h3>
+             <div>
+                <label for="">Invoice Number: </label>
+                <input id="invoicenum" class="bg" type="number" placeholder="1">
+             </div>
+            </div>
+            <div class="ml">
+                <label for="">Due Date:</label>
+                <input id="duedate" class="bg" type="date" required>
+            </div>
+          </div>
+         <hr>
+          <div class="flex mb2">
+             <div class="flex1 ml">
+                <h3>Bill to:</h3>
+                <input id="nameto" class="mb w bg" type="text" placeholder="Who is this invoice to?" required> <br>
+                 <input id="addto" class="mb w bg" type="email" placeholder="Email address" required> <br class="mb">
+                 <input id="emailto" class="mb w bg" type="text" placeholder="Billing adress" required> <br class="mb">
+             </div>
+             <div class="flex1 ml">
+                <h3>Bill from:</h3>
+                <input id="namefrom" class="mb w bg" type="text" placeholder="Who is this invoice from?" required> <br>
+                 <input id="addfrom" class="mb w bg" type="email" placeholder="Email address" required> <br class="mb">
+                 <input id="emailfrom" class="mb w bg" type="text" placeholder="Billing adress" required> <br class="mb">
+             </div>
+          </div>
+           <hr>
+           <div class="flex jsb fgap">
+              <h3 class="flex1 m5">ITEM</h3>
+              <h3 class="m5">QTY</h3>
+              <h3 class="m5">PRICE/RATE</h3>
+              <h3 class="m5">ACTION</h3>
+           </div>
+           <hr>
+           <div id="card">
+            <!-- <div>
+           <div  class="flex carditems">
+                <div class="flex1">
+                <input class="mb bg w" type="text" placeholder="Item Name" required> <br>
+                <input class="mb bg w" type="text" placeholder="Item description" required>
+                </div>
+                <input class="mb bg w45 qty" type="number" value="1" name="" id="">
+                <h3 class="bg right"><span class="bround">$</span></h3>
+                <input class="bg left w100 rate" type="number" value="1.00">
+               <div>
+                <svg class="bgred"  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-white mt-1 btn btn-danger" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 33px; width: 33px; padding: 7.5px;"><path fill="none" d="M17.004 20L17.003 8h-1-8-1v12H17.004zM13.003 10h2v8h-2V10zM9.003 10h2v8h-2V10zM9.003 4H15.003V6H9.003z"></path><path d="M5.003,20c0,1.103,0.897,2,2,2h10c1.103,0,2-0.897,2-2V8h2V6h-3h-1V4c0-1.103-0.897-2-2-2h-6c-1.103,0-2,0.897-2,2v2h-1h-3 v2h2V20z M9.003,4h6v2h-6V4z M8.003,8h8h1l0.001,12H7.003V8H8.003z"></path><path d="M9.003 10H11.003V18H9.003zM13.003 10H15.003V18H13.003z"></path></svg>
+               </div>
+               </div> 
+               <hr>
+            </div> -->
+          </div>
+          <button class="btn" id="btn">ADD Item</button>
+          <div class="flex jfe">
+            <div class="w50p responsive2">
+            <div class="flex jsb"><h3 class="m5">Subtotal:</h3> <div class="m5"><span class="curry">$</span><span id="subto"> 0.00</span></div></div>
+            <div class="flex jsb"><h3 class="m5">Discount:</h3> <div class="m5"><span id="disp">(0%)</span><span class="curry">$</span><span id="disamt"> 0.00</span></div></div>
+            <div class="flex jsb"><h3 class="m5">Tax:</h3> <div class="m5"><span id="taxp" >(0%)</span><span class="curry">$</span><span id="taxamt"> 0.00</span></div></div>
+            <hr>
+            <div class="flex jsb"><h1 class="m5">Total</h1><h1 class="m5"><span class="curry">$</span><span id="tot">0</span></h1></div>
+           </div>
+         </div>
+          
+          <hr>
+           <h3>Notes:</h3>
+           <textarea class="w" name="" id=""  rows="2" placeholder="Thanks for your business!"></textarea>
+         </section> 
+         <section class="w320 responsive2">
+          <button class="w btn mt" id="review">Rview Invoice</button>
+             <hr class="mt">
+ 
+          <h3>Currency:</h3>
+          <select class="w bgcur" name="" id="currency">
+            <option value="$">USD (United State Dollar)</option>
+            <option value="₹">Rupee(Indian)</option>
+            <option value="£">GBP (British Pound Sterling)</option>
+            <option value="¥">JPY (Japanese Yen)</option>
+            <option value="$">CAD (Canadian Dollar)</option>
+            <option value="$">AUD (Australian Dollar)</option>
+            <option value="$">SGD (Signapore Dollar)</option>
+            <option value="¥">CNY (Chinese Renminbi)</option>
+            <option value="₿">BTC (Bitcoin)</option>
+          </select>
+             
+         <h3 >Tax rate:</h3>
+         <input class="wm20px" id="tax" type="number" placeholder="0.0">
+         <span class="border">%</span>
+         
+          <h3>Discount rate:</h3>
+          <input class="wm20px" id="discount" type="number" placeholder="0.0">
+          <span class="border">%</span>
+         </section>
+        </form>
+         
+
+        <div class="pos disn" id="displayy"> <!--    class="pos disn" -->
+       <div class="flex jccaic bgl pad25" id="disq">
+        <section class="bgwhite w60p responsive4" >
+         <div id="content">
+         <div class="bg2 pad25">
+             <div class="flex jsb"><h2 class="m5" id="namefromo">Namefrom</h2>  <h3 class="m5">Amount Due</h3></div>  
+             <div class="flex jsb"><h3 class="m5 fontw">Invoice#: <span id="invoicenumo">1</span></h3> <h3 class="m5 fontw"><span class="curry">$</span><span class="a" id="amtdueo">Amt</span></h3></div>
+         </div>   
+         
+         <div class="pad25">
+         <div class="flex responsive3">
+            <div class="w320">
+               <h4 class="m5">Billed to:</h4>
+               <p class="m5" id="nametoo">Nameto</p>
+               <p class="m5" id="addtoo">address</p>
+               <p class="m5" id="emailtoo">email</p>
+            </div>
+            <div class="w320">
+               <h4 class="m5">Billed From:</h4>
+               <p class="m5" id="namefromo2">Namefrm</p>
+               <p class="m5" id="addfromo">addre</p>
+               <p class="m5" id="emailfromo">emaail</p>
+            </div>
+            <div class="w320">
+               <h4 class="m5">Date Of Issue:</h4>
+               <p class="m5" id="duedateo">DueDate</p>
+            </div>
+          </div>
+         <hr>
+       
+         <div></div>
+         <div class="flex jsb fgap">
+            <h4 class="m5">Qty</h4>
+            <h4 class="flex1 m5">DESCRIPTION</h4>
+            <h4 class="m5">PRICE</h4>
+            <h4 class="m5">AMOUNT</h4>
+         </div>
+         <hr>
+
+         <div id="contu">  
+             <div>
+             <div class="flex jsb fgap">
+               <h4 class="m5 minline fontw">1</h4>
+               <h4 class="flex1 m5 fontw"><Span>ItemName</Span> - <span>Description</span></h4>
+               <h4 class="m5 w70 fontw"><span class="curry">$ </span><span>price</span></h4>
+               <h4 class="m5 fontw"><span class="curry">$ </span><span>price*qty</span></h4>
+             </div>
+              <hr>
+            </div>
+         </div>
+
+         <hr style="margin-top: 40px;">
+           
+         <div class="flex jfe">  <div class="flex jsb w50p"><h5 class="m5">SUBTOTAL</h5> <h5 class="m5 fontw"><span class="curry">$ </span><span id="subtotalamto">AMT</span></h5></div> </div> <hr>
+         <div class="flex jfe"> <div class="flex jsb w50p"><h5 class="m5">TAX</h5> <h5 class="m5 fontw"><span class="curry">$ </span><span id="taxamto">TAX-AMT</span></h5></div> </div>   <hr>
+         <div class="flex jfe"> <div class="flex jsb w50p"><h5 class="m5">DISCOUNT</h5> <h5 class="m5 fontw"><span class="curry">$ </span><span id="discountamto">Dis-Amt</span></h5></div> </div> <hr>  
+         <div class="flex jfe"> <div class="flex jsb w50p"><h5 class="m5">TOTAL</h5> <h5 class="m5 fontw"><span class="curry">$ </span><span id="totalamto">Total-AMT</span></h5></div> </div>  
+         <hr> 
+          </div>
+         </div>
+         <div class="pad25">
+         <div class="flex fgap3">
+         <button class="flex1 mb btn">Send Invoice</button>
+            <button class="flex1 mb btn tran" id="downloadecopy">
+               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="me-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px; margin-top: -3px;"><path d="M18.948,11.112C18.511,7.67,15.563,5,12.004,5c-2.756,0-5.15,1.611-6.243,4.15C3.613,9.792,2.004,11.82,2.004,14 c0,2.757,2.243,5,5,5h1v-2h-1c-1.654,0-3-1.346-3-3c0-1.404,1.199-2.757,2.673-3.016l0.581-0.102l0.192-0.558 C8.153,8.273,9.898,7,12.004,7c2.757,0,5,2.243,5,5v1h1c1.103,0,2,0.897,2,2c0,1.103-0.897,2-2,2h-2v2h2c2.206,0,4-1.794,4-4 C22.004,13.119,20.699,11.538,18.948,11.112z"></path><path d="M13.004 14L13.004 10 11.004 10 11.004 14 8.004 14 12.004 19 16.004 14z"></path></svg>
+               Download Copy</button>
+         </div>
+         </div>
+        </section>
+      </div>
+   </div>
+   <!-- <script src="script.js"></script> -->
+</body>
+</html>
