@@ -14,9 +14,9 @@ Vineela Velpuri -> <a href="https://aadarsh-raj.github.io/Geekathon-Javascript/M
 
 Saurabh Shrikande -> <a href="https://saurabhshrikhande.github.io/MCT-3_InvoiceGenrator/index.html">Hosted Link</a> || <a href="">Demo Video</a> <br>
 
-D S Srivtsa -> <a href="https://github.com/srivatsa007/Geekster-JS/tree/main/MineSweeper-Geekathon2">Hosted Link</a> || <a href="">Demo Video</a> <br>
+D S Srivtsa -> <a href="https://github.com/srivatsa007/Geekster-JS/tree/main/MineSweeper-Geekathon2">Hosted Link</a> || <a href="https://drive.google.com/file/d/1t0Lpep0JPFvxVizafjtdifB7FpOi7zrb/view">Demo Video</a> <br>
 
-Raj Kumar -> <a href="https://rajkumarrj.github.io/Geekathon-javascript/">Hosted Link</a> || <a href="">Demo Video</a> <br>
+Raj Kumar -> <a href="https://rajkumarrj.github.io/Geekathon-javascript/">Hosted Link</a> || <a href="https://www.loom.com/share/50bf14bd1d234800928a28c16485ee09?sid=791e5b2b-aca7-4a5c-8b63-81a1277a6c0d">Demo Video</a> <br>
 
 Our team is dedicated to creating cutting-edge web applications that deliver exceptional user experiences. With a strong emphasis on collaboration and creativity, we strive to push the boundaries of what is possible with JavaScript. Our goal is to inspire and empower others to explore the endless possibilities of this powerful language.
 
