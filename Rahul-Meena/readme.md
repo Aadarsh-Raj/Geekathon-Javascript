@@ -1,5 +1,3 @@
-
-https://github.com/Aadarsh-Raj/Geekathon-Javascript/assets/120627949/8eccc144-e54b-4793-b0a7-c5fa3ac69384
 <h1 align="center">Resume-Builder</h1>
 
 <p align="center">
