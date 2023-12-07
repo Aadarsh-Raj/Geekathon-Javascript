@@ -14,7 +14,7 @@ const paragraphs = [
 
 // Elements from the HTML document
 const pg = document.getElementById('pg');
-const userinput = document.querySelector('.textinput');
+const userinput = document.querySelector('.textinput'); 
 const resetbtn = document.querySelector('.containerin button'); 
 const totaltime = document.querySelector('.time .txt2');
 const totalwpm = document.querySelector('.wpm .txt2');
